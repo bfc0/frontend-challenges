@@ -17,28 +17,43 @@
   <section class="main">
     <div class="mobile">Mobile picture</div>
     <div class="left">
-      <img src="./images/illustration-woman-online-desktop.svg" />
+      <img src="./images/illustration-woman-online-desktop.svg" id="desktop-img" />
     </div>
     <div class="right">
       <h1>FAQ</h1>
-      <button>How many team members can I invite?</button>
-      You can invite up to 2 additional users on the Free plan. There is no limit on
-      team members for the Premium plan.
+      <button class="accordion">How many team members can I invite?</button>
+      <div class="panel">You can invite up to 2 additional users on the Free plan. There is no limit on
+        team members for the Premium plan.</div>
 
-      <button>What is the maximum file upload size?</button>
-      No more than 2GB. All files in your account must fit your allotted storage space.
+      <button class="accordion">What is the maximum file upload size?</button>
+      <div class="panel">No more than 2GB. All files in your account must fit your allotted storage space.
+      </div>
 
-      <button>How do I reset my password?</button>
-      Click “Forgot password” from the login page or “Change password” from your profile page.
-      A reset link will be emailed to you.
+      <button class="accordion">How do I reset my password?</button>
+      <div class="panel">Click “Forgot password” from the login page or “Change password” from your profile page.
+        A reset link will be emailed to you.</div>
 
-      <button>Can I cancel my subscription?</button>
-      Yes! Send us a message and we’ll process your request no questions asked.
+      <button class="accordion">Can I cancel my subscription?</button>
+      <div class="panel">Yes! Send us a message and we’ll process your request no questions asked.
+      </div>
 
-      <button>Do you provide additional support?</button>
-      Chat and email support is available 24/7. Phone lines are open during normal business hours.
+      <button class="accordion">Do you provide additional support?</button>
+      <div class="panel">Chat and email support is available 24/7. Phone lines are open during normal business hours.
+      </div>
     </div>
   </section>
+  <script>
+
+    const acc = document.getElementsByClassName('accordion')
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener('click', () => {
+        this.classList.toggle('active')
+        const p = this.nextElementSibling
+        console.log(p)
+        p.style.display = p.style.display === 'block' ? 'none' : 'block'
+      })
+    }
+  </script>
 </body>
 
 </html>

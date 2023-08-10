@@ -16,6 +16,7 @@ body {
     align-items: center;
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 12px;
+    font-weight: 400;
 }
 
 div,
@@ -30,7 +31,7 @@ section {
     flex-direction: row;
     border-radius: 2em;
     overflow: hidden;
-    max-width: 1000px;
+    max-width: 900px;
 }
 
 .left,
@@ -41,15 +42,24 @@ section {
     align-items: center;
     flex-basis: 50%;
     background-color: white;
+    overflow: hidden;
+}
+
+.left {
+    padding-right: 3em;
 }
 
 .right {
     padding: 2em;
+    align-items: flex-start;
+    padding-right: 7em;
 }
 
 h1 {
     align-self: flex-start;
-    margin: 2em 0;
+    /* margin: 1em 0; */
+    font-weight: 700;
+    font-size: 2em;
 }
 
 .mobile {
@@ -57,8 +67,22 @@ h1 {
     display: none;
 }
 
-button {
+.accordion {
     width: 100%;
+    outline: none;
+    background-color: transparent;
+    font-family: inherit;
+    margin-right: 4em;
+}
+
+.panel {
+    display: none;
+}
+
+#desktop-img {
+    margin-right: 10rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
 }
 
 :root {
