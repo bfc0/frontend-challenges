@@ -1,0 +1,139 @@
+*,
+body,
+html {
+    box-sizing: border-box;
+}
+
+div,
+section,
+p,
+h1,
+body {
+    /* border: 1px solid black; */
+}
+
+html {
+    font-family: 'Montserrat', 'Fraunces', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: var(--color-cream);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    border-radius: 0.5em;
+    background-color: var(--color-white);
+    overflow: hidden;
+}
+
+.main>div {
+    overflow: hidden;
+    flex-basis: 50%;
+}
+
+.left {
+    display: flex;
+}
+
+.right {
+    padding: 2em;
+}
+
+img,
+picture {
+    max-width: 100%;
+}
+
+p {
+    color: var(--color-dark-grayish);
+    margin-top: 0.7em;
+    line-height: 1.65;
+}
+
+p:nth-child(1) {
+    margin-top: 0;
+    letter-spacing: 0.3em;
+}
+
+h1 {
+    font-family: 'Fraunces';
+    font-weight: 700;
+    font-size: 2.4em;
+    color: var(--color--dark-blue);
+    margin: 0.5em 0;
+    line-height: 1;
+
+}
+
+span {
+    font-family: 'Fraunces';
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: 2.4em;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1.5em;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: var(--color-primary);
+    border-radius: 0.5em;
+    color: var(--color-white);
+    padding: 1.2em;
+    border: 0;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--color-btn-hover);
+}
+
+button>img {
+    margin-right: 1em;
+}
+
+picture {
+    display: flex;
+}
+
+@media(max-width: 600px) {
+    .main>div {
+        flex-basis: 100%;
+    }
+}
+
+:root {
+    --color-primary: hsl(158, 36%, 37%);
+    --color-cream: hsl(30, 38%, 92%);
+    --color--dark-blue: hsl(212, 21%, 14%);
+    --color-dark-grayish: hsl(228, 12%, 48%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-btn-hover: rgb(26, 64, 49);
+}
