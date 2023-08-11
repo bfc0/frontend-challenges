@@ -17,25 +17,30 @@ body {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 12px;
     font-weight: 400;
+    color: var(--color-dark-grayish-blue);
+    /* overflow: visible; */
 }
 
 div,
 p,
 h1,
+h2,
 section {
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 section {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     border-radius: 2em;
     overflow: hidden;
     max-width: 900px;
 }
 
 .left,
-.right {
+.right,
+.mobile {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -43,23 +48,32 @@ section {
     flex-basis: 50%;
     background-color: white;
     overflow: hidden;
+    position: relative;
 }
 
 .left {
     padding-right: 3em;
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-size: 200%;
+    background-position-x: -43rem;
+    background-position-y: -20rem;
+    background-repeat: no-repeat;
 }
+
 
 .right {
     padding: 2em;
     align-items: flex-start;
+    justify-content: flex-start;
     padding-right: 7em;
 }
 
 h1 {
     align-self: flex-start;
-    /* margin: 1em 0; */
+    margin: 1.2em 0;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 2.6em;
+    color: var(--color-very-dark-blue);
 }
 
 .mobile {
@@ -71,25 +85,130 @@ h1 {
     width: 100%;
     outline: none;
     background-color: transparent;
-    font-family: inherit;
     margin-right: 4em;
+    overflow: hidden;
 }
 
-.panel {
+.accordion input[type=checkbox] {
     display: none;
+}
+
+.accordion label {
+    display: block;
+    padding: 1.2em 0;
+    color: var(--color-very-dark-blue);
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+#section1~label {
+    padding-top: 0;
+}
+
+
+.accordion .panel {
+    display: none;
+    margin-bottom: 1em;
+}
+
+.accordion input:checked~.panel {
+    display: block;
+}
+
+.accordion input:checked~label {
+    font-weight: 700;
+    color: var(--color-very-dark-blue);
+}
+
+.accordion div {
+    border-bottom: 1px solid var(--color-thin);
+}
+
+.accordion label:hover,
+.accordion label:active {
+    font-weight: 700;
+    color: var(--color-soft-red);
 }
 
 #desktop-img {
     margin-right: 10rem;
     margin-top: 6rem;
     margin-bottom: 6rem;
+    position: relative;
 }
+
+#desktop-background {
+    position: absolute;
+}
+
+#mobile-img {
+    max-height: 20em;
+    /* z-index: -1; */
+    position: absolute;
+}
+
+
+
+.accordion label img {
+    aspect-ratio: 1;
+    height: 0.7em;
+    margin: 0.3em;
+}
+
+.accordion input:checked~label img {
+    transform: rotate(180deg);
+}
+
+@media (max-width:850px) {
+
+    section {
+        overflow: visible;
+    }
+
+    .mobile,
+    .right {
+        display: flex;
+        flex-basis: 100%;
+        padding: 1em;
+        overflow: visible;
+    }
+
+    h1 {
+        align-self: center;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .mobile {
+        min-height: 200px;
+        border-radius: 2em;
+        overflow: visible;
+        z-index: 1;
+        /* height: 10em; */
+        /* background-image: url('./images/bg-pattern-mobile.svg');
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position-x: 50%; */
+    }
+
+    .accordion {
+        margin-right: 1em;
+    }
+}
+
 
 :root {
     --color-very-dark-blue: hsl(238, 29%, 16%);
     --color-soft-red: hsl(14, 88%, 65%);
-    --color-dark-grayish-blue: hsl(237, 12%, 33%);
+    /* --color-dark-grayish-blue: hsl(237, 12%, 33%); */
     --color-dark-grayish-blue: hsl(240, 6%, 50%);
+    --color-thin: hsla(240, 6%, 50%, 0.25);
 
     --color-bg-violet: hsl(273, 75%, 66%);
     --color-bg-blue: hsl(240, 73%, 65%);

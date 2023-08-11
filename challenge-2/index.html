@@ -15,45 +15,60 @@
 
 <body>
   <section class="main">
-    <div class="mobile">Mobile picture</div>
+    <div class="mobile">
+      <img src="./images/illustration-woman-online-mobile.svg" id="mobile-img">
+    </div>
     <div class="left">
-      <img src="./images/illustration-woman-online-desktop.svg" id="desktop-img" />
+      <!-- <img src="./images/bg-pattern-desktop.svg" id="desktop-background" /> -->
+      <img src="./images/illustration-woman-online-desktop.svg" id="desktop-img">
     </div>
     <div class="right">
       <h1>FAQ</h1>
-      <button class="accordion">How many team members can I invite?</button>
-      <div class="panel">You can invite up to 2 additional users on the Free plan. There is no limit on
-        team members for the Premium plan.</div>
-
-      <button class="accordion">What is the maximum file upload size?</button>
-      <div class="panel">No more than 2GB. All files in your account must fit your allotted storage space.
-      </div>
-
-      <button class="accordion">How do I reset my password?</button>
-      <div class="panel">Click “Forgot password” from the login page or “Change password” from your profile page.
-        A reset link will be emailed to you.</div>
-
-      <button class="accordion">Can I cancel my subscription?</button>
-      <div class="panel">Yes! Send us a message and we’ll process your request no questions asked.
-      </div>
-
-      <button class="accordion">Do you provide additional support?</button>
-      <div class="panel">Chat and email support is available 24/7. Phone lines are open during normal business hours.
-      </div>
+      <div class="accordion">
+        <div>
+          <input type="checkbox" id="section1" />
+          <label for="section1">
+            How many team members can I invite?
+            <img src="./images/icon-arrow-down.svg" class="arrow">
+          </label>
+          <p class="panel">You can invite up to 2 additional users on the Free plan. There is no limit on
+            team members for the Premium plan.</p>
+        </div>
+        <div>
+          <input type="checkbox" id="section2" />
+          <label for="section2">
+            What is the maximum file upload size?
+            <img src="./images/icon-arrow-down.svg" class="arrow">
+          </label>
+          <p class="panel">No more than 2GB. All files in your account must fit your allotted storage space.
+          </p>
+        </div>
+        <div>
+          <input type="checkbox" id="section3" />
+          <label for="section3">How do I reset my password?
+            <img src="./images/icon-arrow-down.svg" class="arrow"></label>
+          <p class="panel">Click “Forgot password” from the login page or “Change password” from your profile page.
+            A reset link will be emailed to you.</p>
+        </div>
+        <div>
+          <input type="checkbox" id="section4" />
+          <label for="section4">Can I cancel my subscription?
+            <img src="./images/icon-arrow-down.svg" class="arrow"></label>
+          <p class="panel">Yes! Send us a message and we’ll process your request no questions asked.
+          </p>
+        </div>
+        <div>
+          <input type="checkbox" id="section5" />
+          <label for="section5">Do you provide additional support?
+            <img src="./images/icon-arrow-down.svg" class="arrow"></label>
+          <p class="panel">Chat and email support is available 24/7. Phone lines are open during normal business
+            hours.
+          </p>
+        </div>
+      </div class="accordion">
     </div>
   </section>
-  <script>
 
-    const acc = document.getElementsByClassName('accordion')
-    for (let i = 0; i < acc.length; i++) {
-      acc[i].addEventListener('click', () => {
-        this.classList.toggle('active')
-        const p = this.nextElementSibling
-        console.log(p)
-        p.style.display = p.style.display === 'block' ? 'none' : 'block'
-      })
-    }
-  </script>
 </body>
 
 </html>
