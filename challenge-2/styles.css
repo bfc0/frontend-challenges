@@ -18,7 +18,7 @@ body {
     font-size: 12px;
     font-weight: 400;
     color: var(--color-dark-grayish-blue);
-    /* overflow: visible; */
+    background-image: linear-gradient(-180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 
 div,
@@ -27,6 +27,10 @@ h1,
 h2,
 section {
     /* border: 1px solid black; */
+}
+
+main {
+    position: relative;
 }
 
 section {
@@ -48,7 +52,7 @@ section {
     flex-basis: 50%;
     background-color: white;
     overflow: hidden;
-    position: relative;
+
 }
 
 .left {
@@ -58,6 +62,9 @@ section {
     background-position-x: -43rem;
     background-position-y: -20rem;
     background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+
 }
 
 
@@ -79,6 +86,7 @@ h1 {
 .mobile {
     flex-basis: 0%;
     display: none;
+    width: 320px;
 }
 
 .accordion {
@@ -145,10 +153,20 @@ h1 {
     position: absolute;
 }
 
+#box-img {
+    position: absolute;
+    left: -10em;
+    z-index: 1;
+    top: 19rem;
+    left: -8rem;
+}
+
 #mobile-img {
     max-height: 20em;
     /* z-index: -1; */
     position: absolute;
+    top: -11rem;
+    width: 80%;
 }
 
 
@@ -163,7 +181,7 @@ h1 {
     transform: rotate(180deg);
 }
 
-@media (max-width:850px) {
+@media (max-width:800px) {
 
     section {
         overflow: visible;
@@ -185,21 +203,34 @@ h1 {
         display: none;
     }
 
+    .right {
+        border-radius: 0 0 2em 2em;
+        overflow: visible;
+        /* max-width: 320px; */
+    }
+
     .mobile {
-        min-height: 200px;
-        border-radius: 2em;
+        min-height: 120px;
+        border-radius: 2em 2em 0 0;
         overflow: visible;
         z-index: 1;
-        /* height: 10em; */
-        /* background-image: url('./images/bg-pattern-mobile.svg');
-        background-size: 50%;
+        position: relative;
+        background-image: url('./images/bg-pattern-mobile.svg');
         background-repeat: no-repeat;
-        background-position-x: 50%; */
+        background-position: center;
+        background-position-y: 2em;
+        /* max-width: 320px; */
     }
 
     .accordion {
         margin-right: 1em;
+        margin-bottom: 3em;
     }
+
+    #box-img {
+        display: none;
+    }
+
 }
 
 
