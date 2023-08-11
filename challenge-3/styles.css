@@ -1,0 +1,135 @@
+*,
+html,
+body {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 99%;
+}
+
+div,
+main {
+    /* border: 1px solid black; */
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--very-light-gray);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    max-width: 900px;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 0.7em;
+    overflow: hidden;
+}
+
+.card {
+    flex-basis: 33.3%;
+    padding: 3em;
+}
+
+.card:nth-of-type(1) {
+    background-color: var(--bright-orange);
+}
+
+.img_holder img {
+    max-height: 2.3em;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display';
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+    font-weight: 700;
+    font-size: 2.3em;
+}
+
+p {
+    color: var(--transparent-white);
+    line-height: 1.6;
+    font-size: 0.9em;
+    letter-spacing: 0.4px;
+}
+
+button {
+    border: none;
+    background-color: var(--very-light-gray);
+    padding: 1em 2em;
+    border-radius: 2em;
+    color: var(--bright-orange);
+    margin-top: 5em;
+    font-weight: 700;
+    font-size: 14px;
+    border: 2px solid transparent;
+}
+
+button:hover {
+    cursor: pointer;
+    border: 2px solid var(--transparent-white);
+    color: var(--very-light-gray);
+    background-color: var(--bright-orange);
+}
+
+.card:nth-of-type(2) {
+    background-color: var(--dark-cyan);
+}
+
+.card:nth-of-type(2) button {
+    color: var(--dark-cyan);
+}
+
+.card:nth-of-type(2) button:hover {
+    color: var(--very-light-gray);
+    background-color: var(--dark-cyan);
+}
+
+.card:nth-of-type(3) button:hover {
+    color: var(--very-light-gray);
+    background-color: var(--very-dark-cyan);
+}
+
+
+
+.card:nth-of-type(3) {
+    background-color: var(--very-dark-cyan);
+}
+
+.card:nth-of-type(3) button {
+    color: var(--very-dark-cyan);
+}
+
+@media (max-width: 750px) {
+    body {
+        overflow: scroll;
+        height: auto;
+    }
+
+    main {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    button {
+        margin-top: 2em;
+    }
+}
+
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
