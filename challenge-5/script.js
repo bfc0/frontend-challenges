@@ -7,6 +7,7 @@ function toggleShare() {
             mobileToggle()
         }
         desktopToggle()
+        placeAtButtonPosition()
         return
     }
     //mobile
@@ -28,6 +29,16 @@ function mobileToggle() {
 
 function desktopToggle() {
     document.getElementById("footer2").classList.toggle("hidden")
-    document.getElementById("btn_share_2").classList.toggle("hidden")
+    // document.getElementById("btn_share_2").classList.toggle("hidden")
     document.getElementById("footer2").classList.toggle("popout")
 }
+
+function placeAtButtonPosition() {
+    const btn = document.querySelector("#btn_share_1")
+    const mid = (btn.getBoundingClientRect().right + btn.getBoundingClientRect().left) / 2
+
+    const bar = document.querySelector("#footer2")
+    bar.style.left = mid - 125 + 'px'
+    bar.style.top = btn.getBoundingClientRect().top - 100 + 'px'
+}
+
