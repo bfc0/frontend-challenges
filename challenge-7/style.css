@@ -128,6 +128,7 @@ header p {
     border-radius: 0.3em;
     padding: 1em;
     margin-top: 0;
+    color: var(--clr-grayish-blue);
 }
 
 .message:hover {
