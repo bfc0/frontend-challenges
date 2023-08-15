@@ -156,6 +156,10 @@ header p {
     cursor: pointer;
 }
 
+#mark-all:hover {
+    cursor: pointer;
+}
+
 @media(min-width: 800px) {
     main {
         margin: auto;
