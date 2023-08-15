@@ -7,16 +7,23 @@ body {
     /* border: 1px solid black; */
 }
 
+body,
+html {
+    height: 100dvh;
+}
+
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 16px;
     font-weight: 500;
-    background-color: var(--clr-very-light-grayish-blue);
+    background-color: var(--clr-light-grayish-blue-2);
+    display: flex;
 }
 
 main {
     padding: 1em;
+    margin: 0;
     background-color: var(--clr-white);
     border-radius: 0.7em;
 }
@@ -36,7 +43,7 @@ h1 {
 }
 
 em {
-    background-color: var(--clr-very-dark-blue);
+    background-color: var(--clr-blue);
     color: var(--clr-white);
     font-style: normal;
     font-weight: 700;
@@ -106,7 +113,7 @@ header p {
 }
 
 .new {
-    background-color: var(--clr-light-grayish-blue-1);
+    background-color: var(--clr-very-light-grayish-blue);
 }
 
 .new:hover {
@@ -163,7 +170,7 @@ header p {
 @media(min-width: 800px) {
     main {
         margin: auto;
-        margin-top: 2em;
+        /* margin-top: 2em; */
         width: min(60%, 650px)
     }
 }
