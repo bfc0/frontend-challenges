@@ -7,10 +7,17 @@ html {
     /* border: 1px solid lightgray; */
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: 'Dm Sans', sans-serif;
     font-size: 18px;
     background-color: var(--clr-cream);
+    display: flex;
+    flex-direction: center;
 }
 
 .container {
