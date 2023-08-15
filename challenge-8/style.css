@@ -17,12 +17,13 @@ body {
     font-size: 18px;
     background-color: var(--clr-cream);
     display: flex;
-    flex-direction: center;
+    justify-content: center;
 }
 
 .container {
     padding-inline: 1em;
     padding-block: 4em;
+    width: 100%;
 }
 
 header {
