@@ -1,3 +1,4 @@
+import './Card.css'
 
 function Card(props) {
     console.log(props)
@@ -5,26 +6,28 @@ function Card(props) {
     const tags = [...props.languages]
     tags.push(props.role)
     tags.push(props.level)
+    const logo = "." + props.logo
     return (
-        <div className="card">
+        <div className={props.featured ? "card feat" : "card"}>
+            <img src={logo} alt="logo" />
             <div className="content">
-                <span>{props.company}&nbsp;</span>
-                <span className="card__new">{props.new && "new!"}&nbsp;</span>
-                <span className="card__featured">{props.featured && "featured"}&nbsp;</span>
+                <span className='company'>{props.company}&nbsp;</span>
+                {props.new && <span className="card__new">&nbsp;new!&nbsp;</span>}
+                {!!props.featured && <span className="card__featured">&nbsp;featured&nbsp;</span>}
                 <p className="card__position">{props.position}</p>
                 <div className="card__opts">
-                    <span>{props.postedAt}&nbsp;</span>
-                    <span>{props.contract}&nbsp;</span>
-                    <span>{props.location}&nbsp;</span>
+                    <span>{props.postedAt}&nbsp;⸱</span>
+                    <span>&nbsp;{props.contract}&nbsp;⸱</span>
+                    <span>&nbsp;{props.location}&nbsp;</span>
 
                 </div>
             </div>
             <div className="tags">
                 {tags.map((tag, idx) => (
-                    <span key={idx} onClick={() => props.setter(tag)}>{tag}&nbsp;</span>
+                    <span key={idx} className='tag' onClick={() => props.setter(tag)}>{tag}&nbsp;</span>
                 ))}
             </div>
-        </div>
+        </div >
     )
 }
 
